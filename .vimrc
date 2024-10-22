@@ -1,5 +1,3 @@
-" Configuración básica de Vim para C++
-
 set nocompatible
 
 " 1. Habilitar números de línea
@@ -68,20 +66,20 @@ set mouse=a
 " 20. Mejorar el tiempo de espera de mapeos (usado para atajos)
 set timeoutlen=500
 
-" 21. Colores de fondo (opcional)
-
-
+" 22. Cambiar sonido de 'error' por aviso visual
 set visualbell
 
+" 23. Resaltar coincidencias de búsqueda
 set hlsearch
 
+" 24. Configuración de color y tema
 colorscheme xcode
 set background=dark
+
+" 25. Carácteres máximos de una line
 set textwidth=79
 
-syntax on
-
-" Volver a la última posición al abrir un fichero
+" 26. Volver a la última posición al abrir un fichero
 " https://stackoverflow.com/questions/7894330/preserve-last-editing-position-in-vim
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
