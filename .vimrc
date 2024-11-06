@@ -73,8 +73,8 @@ set visualbell
 set hlsearch
 
 " 24. Configuración de color y tema
-colorscheme xcode
-set background=dark
+" colorscheme xcode
+" set background=dark
 
 " 25. Carácteres máximos de una line
 set textwidth=79
@@ -85,3 +85,18 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" 27. Configuración de Vim-Plug para el tema gruvbox
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+call plug#end()
+
+syntax enable        " Habilitar la sintaxis
+set background=dark  " Usar el tema oscuro de Gruvbox (también puedes usar 'light')
+colorscheme gruvbox  " Establecer Gruvbox como esquema de colores
+
+" 28. Copiar y pegar con Shift
+vnoremap <S-y> "+y
+map <S-p> "+gP
+
+set clipboard=unnamedplus
